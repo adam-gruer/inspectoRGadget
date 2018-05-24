@@ -30,7 +30,7 @@ devtools::install_github("adam-gruer/inspectoRGadget")
 
 ## Example
 
-Step 1: **gadgetize** an installed package by calling
+Step 1: **gadgetize** your favourite installed package by calling
 `gogo_gadget_arms()` Wowsers\! All that package’s functions and objects
 can now be used by typing `gogo_{function/object}`
 
@@ -40,9 +40,14 @@ library(inspectoRGadget)
 gogo_gadget_arms("dplyr")
 ```
 
-All those gogo\_s now live in your r session’s global environment. That
-*is probably frowned upon* , I’d love to learn how to avoid doing that,
-let me know if you already have a solution.
+All those gogo\_s now live in your search path in an environment called
+`gadget` (thanks for the [tip Hadley
+Wickam\!](https://github.com/adam-gruer/inspectoRGadget/issues/2))
+
+This *is not really important* unless you have already loaded an
+important, useful package also called `gadget`. In that case, sorry,
+together we probably busted something, I see error messages in your
+future.
 
 Step 2: **gogo\_** all the things\! here we `gogo_filter()` the
 `beaver1` dataset to find when the critter was active
