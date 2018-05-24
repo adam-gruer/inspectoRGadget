@@ -1,4 +1,7 @@
 [![Travis build status](https://travis-ci.org/adam-gruer/inspectoRGadget.svg?branch=master)](https://travis-ci.org/adam-gruer/inspectoRGadget)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/adam-gruer/inspectoRGadget?branch=master&svg=true)](https://ci.appveyor.com/project/adam-gruer/inspectoRGadget)
+[![Coverage status](https://codecov.io/gh/adam-gruer/inspectoRGadget/branch/master/graph/badge.svg)](https://codecov.io/github/adam-gruer/inspectoRGadget?branch=master)
+
 # inspectoRGadget
 
 The goal of inspectoRGadget is to meet an urgent need spelled out in this [twitter plea](https://twitter.com/CausalKathy/status/999091807937028096)
