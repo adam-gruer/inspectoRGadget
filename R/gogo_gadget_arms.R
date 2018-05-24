@@ -9,9 +9,11 @@
 #' @export
 #'
 #' @examples
+#'
 #' gogo_gadget_arms("dplyr")
 #'
-#' gogo.filter(beaver1, activ == 1)
+#' gogo_filter(beaver1, activ == 1)
+#'
 
 
 gogo_gadget_arms <-  function(package) {

@@ -17,7 +17,9 @@ returns nothing but adds A LOT of gadgetized objects to your .GlobalEnv
 Gadgetize all the package things
 }
 \examples{
+
 gogo_gadget_arms("dplyr")
 
-gogo.filter(beaver1, activ == 1)
+gogo_filter(beaver1, activ == 1)
+
 }
