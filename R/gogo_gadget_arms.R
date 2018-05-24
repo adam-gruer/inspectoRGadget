@@ -30,13 +30,17 @@ gogo_gadget_arms <-  function(package) {
 
   funcs <- ls(paste0("package:",package))
 
-  # assign each function to a new function in the  .GlobalEnv environment
-  # todo <- add these to the search path rather than the .GlobalEnv
+  # Create new environment gadget
+  # assign each function to gadget environment
+  # attach gadget environment to search path
+  # credit: Hadley Wickhaam https://github.com/adam-gruer/inspectoRGadget/issues/2
 
+  gadget  <- new.env()
 
   purrr::walk(funcs ,  function(.f){
     assign(paste0("gogo_",.f),
            get(.f),
-           envir = .GlobalEnv)
+           envir = gadget)
   })
+  attach(gadget)
 }
