@@ -1,0 +1,15 @@
+Package: inspectoRGadget
+Version: 0.0.0.9001
+Title: gogo_ all a packages objects
+Description: Prepends "gogo_" to all a specified packages exported objects and adds them to the global environement
+Authors@R: "Adam Gruer <adamgruer@icloud.com> [aut, cre]"
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+Imports: 
+    purrr
+Suggests: 
+    testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.0.1
