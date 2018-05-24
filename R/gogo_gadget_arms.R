@@ -5,7 +5,8 @@
 #' @param package character vector length 1, the package to gadgetize , must be intalled
 #' will be added to searchPath
 #'
-#' @return returns nothing but adds A LOT of gadgetized objects to your .GlobalEnv
+#' @return returns nothing but adds an environment to your seach path called gadget_arms
+#' all the exported functions and objects of `package` can now be called by typing `gogo_{functions/object_name}`
 #' @export
 #'
 #' @examples
@@ -30,17 +31,18 @@ gogo_gadget_arms <-  function(package) {
 
   funcs <- ls(paste0("package:",package))
 
-  # Create new environment gadget
+  # Create new environment gadget_arms
   # assign each function to gadget environment
   # attach gadget environment to search path
   # credit: Hadley Wickhaam https://github.com/adam-gruer/inspectoRGadget/issues/2
+  # todo if gadget_arms is already in search path copy it %>% detach it %>% add to it %>%  reattach it
 
-  gadget  <- new.env()
+  gadget_arms  <- new.env()
 
   purrr::walk(funcs ,  function(.f){
     assign(paste0("gogo_",.f),
            get(.f),
-           envir = gadget)
+           envir = gadget_arms)
   })
-  attach(gadget)
+  attach(gadget_arms)
 }

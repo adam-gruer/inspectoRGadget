@@ -11,7 +11,8 @@ gogo_gadget_arms(package)
 will be added to searchPath}
 }
 \value{
-returns nothing but adds A LOT of gadgetized objects to your .GlobalEnv
+returns nothing but adds an environment to your seach path called gadget_arms
+all the exported functions and objects of \code{package} can now be called by typing \code{gogo_{functions/object_name}}
 }
 \description{
 Gadgetize all the package things
