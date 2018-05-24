@@ -1,3 +1,17 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 [![Travis build status](https://travis-ci.org/adam-gruer/inspectoRGadget.svg?branch=master)](https://travis-ci.org/adam-gruer/inspectoRGadget)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/adam-gruer/inspectoRGadget?branch=master&svg=true)](https://ci.appveyor.com/project/adam-gruer/inspectoRGadget)
 [![Coverage status](https://codecov.io/gh/adam-gruer/inspectoRGadget/branch/master/graph/badge.svg)](https://codecov.io/github/adam-gruer/inspectoRGadget?branch=master)
@@ -22,8 +36,14 @@ devtools::install_github("adam-gruer/inspectoRGadget")
 
 Step 1: **gadgetize** an installed package by calling `gogo_gadget_arms()`
   Wowsers!  All that package's functions and objects can now be used by typing
-  `gogo_{function/object}` 
+  `gogo_{function/object}`
 ```r
+library(inspectoRGadget)
+
+gogo_gadget_arms("dplyr")
+```
+  
+```{r gadgetize, include=FALSE}
 library(inspectoRGadget)
 
 gogo_gadget_arms("dplyr")
