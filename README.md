@@ -40,20 +40,11 @@ library(inspectoRGadget)
 gogo_gadget_arms("dplyr")
 ```
 
-All those gogo\_s now live in your search path in an environment called
-`gadget` (thanks for the [tip Hadley
-Wickam\!](https://github.com/adam-gruer/inspectoRGadget/issues/2))
-
-This *is not really important* unless you have already loaded an
-important, useful package also called `gadget`. In that case, sorry,
-together we probably busted something, I see error messages in your
-future.
-
-Step 2: **gogo\_** all the things\! here we `gogo_filter()` the
+Step 2: **gogo\_** all the things\! Here we `gogo_filter()` the
 `beaver1` dataset to find when the critter was active
 
 ``` r
-gogo_filter(beaver1, activ ==1)
+gogo_filter(beaver1, activ == 1)
 #>   day time  temp activ
 #> 1 346 1730 37.07     1
 #> 2 346 1950 37.10     1
@@ -62,6 +53,16 @@ gogo_filter(beaver1, activ ==1)
 #> 5 346 2300 37.24     1
 #> 6 347  340 37.15     1
 ```
+
+All those gogo\_s now live in your search path in an environment called
+`gadget_arms` (thanks for the [tip Hadley
+Wickam\!](https://github.com/adam-gruer/inspectoRGadget/issues/2))
+
+This *is not really important* unless you have already loaded an
+important, useful package also called `gadget_arms`. In that case,
+sorry, together we probably busted something, I see error messages in
+your
+future.
 
 ### **Please note there are probably lots of reasons this is not a good idea but neither Brain nor Penny was around to stop us**
 

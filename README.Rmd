@@ -45,21 +45,23 @@ gogo_gadget_arms("dplyr")
   
 ```{r gadgetize, include=FALSE}
 library(inspectoRGadget)
-
 gogo_gadget_arms("dplyr")
 ```
-  All those gogo_s now live in your search path in an environment called `gadget`
-  (thanks for the [tip Hadley Wickam!](https://github.com/adam-gruer/inspectoRGadget/issues/2))
-  
-  This _is not really important_ unless you have already loaded an important,
-  useful package also called `gadget`. In that case, sorry, together we probably busted 
-  something, I see error messages in your future.
 
 Step 2: **gogo_** all the things!
-  here we `gogo_filter()` the `beaver1` dataset to find when the critter was active
-```{r}
-gogo_filter(beaver1, activ ==1)
+  Here we `gogo_filter()` the `beaver1` dataset to find when the critter was active
+```{r gogo_filter}
+gogo_filter(beaver1, activ == 1)
 ```
+
+All those gogo_s now live in your search path in an environment called `gadget_arms`
+(thanks for the [tip Hadley Wickam!](https://github.com/adam-gruer/inspectoRGadget/issues/2))
+
+This _is not really important_ unless you have already loaded an important,
+useful package also called `gadget_arms`. In that case, sorry, together we probably busted 
+something, I see error messages in your future. 
+
+
 ### **Please note there are probably lots of reasons this is not a good idea but neither Brain nor Penny was around to stop us**
 
 ## Code of Conduct
