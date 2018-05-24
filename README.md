@@ -1,3 +1,4 @@
+[![Travis build status](https://travis-ci.org/adam-gruer/inspectoRGadget.svg?branch=master)](https://travis-ci.org/adam-gruer/inspectoRGadget)
 # inspectoRGadget
 
 The goal of inspectoRGadget is to meet an urgent need spelled out in this [twitter plea](https://twitter.com/CausalKathy/status/999091807937028096)
