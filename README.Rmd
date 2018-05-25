@@ -17,6 +17,8 @@ knitr::opts_chunk$set(
 [![Coverage status](https://codecov.io/gh/adam-gruer/inspectoRGadget/branch/master/graph/badge.svg)](https://codecov.io/github/adam-gruer/inspectoRGadget?branch=master)
 
 # inspectoRGadget
+![inspectoRGadget hex sticker](inst/figures/inspectoRGadget.png "Package hex sticker")
+
 
 The goal of inspectoRGadget is to meet an urgent need spelled out in this [twitter plea](https://twitter.com/CausalKathy/status/999091807937028096)
 
