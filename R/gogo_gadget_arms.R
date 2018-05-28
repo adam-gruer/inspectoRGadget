@@ -40,7 +40,7 @@ gogo_gadget_arms <-  function(package) {
     new_env <- "gadget_arms"
 
     if (any(search() == new_env)) {
-            gadget_arms <- detach(new_env)
+            gadget_arms <- detach(new_env, character.only = TRUE)
 
           } else {
             gadget_arms  <- new.env()
