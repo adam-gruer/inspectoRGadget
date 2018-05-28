@@ -31,11 +31,11 @@ gogo_gadget_arms <-  function(package) {
   gogo_names <- paste0("gogo_",exp_names)
 
 
-  # Create new environment gadget_arms
-  # assign each function to gadget environment
-  # attach gadget environment to search path
+  # Create new environment gadget_arms or detach from search path it it exists
+  # assign each function to gadget_arms environment
+  # attach gadget_arms environment to search path
   # credit: Hadley Wickhaam https://github.com/adam-gruer/inspectoRGadget/issues/2
-  # todo if gadget_arms is already in search path copy it %>% detach it %>% add to it %>%  reattach it
+
 
     new_env <- "gadget_arms"
 
