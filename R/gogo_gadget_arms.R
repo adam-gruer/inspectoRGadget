@@ -3,7 +3,6 @@
 #'
 #'
 #' @param package character vector length 1, the package to gadgetize , must be intalled
-#' will be added to searchPath
 #'
 #' @return returns nothing but adds an environment to your seach path called gadget_arms
 #' all the exported functions and objects of `package` can now be called by typing `gogo_{functions/object_name}`
@@ -20,16 +19,15 @@
 gogo_gadget_arms <-  function(package) {
 
 
-  # todo <-  would like to try this # ls( asNamespace("dplyr") ) instead
-  # of require(package, character.only = TRUE)
-  # but it returns all objects and functions not just exported ones
+  #getNamespace returns the returns the environment representing the name space name. The namespace is loaded if necessary.
 
-  require(package, character.only = TRUE)
+  ns <- getNamespace(package)
 
-  # list of all exported objects in package
-  # package needs to be in the search path
+  # vector of all names (i.e. functions and objects) exported ny the namespace
 
-  funcs <- ls(paste0("package:",package))
+
+  # funcs <- ls(paste0("package:",package))
+  names <- getNamespaceExports(ns)
 
   # Create new environment gadget_arms
   # assign each function to gadget environment
@@ -39,9 +37,9 @@ gogo_gadget_arms <-  function(package) {
 
   gadget_arms  <- new.env()
 
-  purrr::walk(funcs ,  function(.f){
-    assign(paste0("gogo_",.f),
-           get(.f),
+  purrr::walk(names ,  function(.n){
+    assign(paste0("gogo_",.n),
+           getExportedValue(ns, .n),
            envir = gadget_arms)
   })
   attach(gadget_arms)

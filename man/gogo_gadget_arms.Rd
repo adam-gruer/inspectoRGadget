@@ -7,8 +7,7 @@
 gogo_gadget_arms(package)
 }
 \arguments{
-\item{package}{character vector length 1, the package to gadgetize , must be intalled
-will be added to searchPath}
+\item{package}{character vector length 1, the package to gadgetize , must be intalled}
 }
 \value{
 returns nothing but adds an environment to your seach path called gadget_arms
